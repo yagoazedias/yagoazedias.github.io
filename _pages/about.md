@@ -11,7 +11,7 @@ Senior Software Engineer at Nubank. Ex-OLX. Bachelor's in Information Systems.
 
 ## Who Am I?
 
-Hey! My name is Yago Azedias. I'm a Senior Software Engineer at [Nubank](https://nubank.com.br/) in Rio de Janeiro, Brazil. Previously I spent 3+ years at [Grupo OLX](https://www.olx.com.br/) — Latin America's largest classifieds platform — where I worked across payments, FinOps, Server-Driven UI, and automotive financing.
+Hey! My name is Yago Azedias. I'm a Senior Software Engineer at [Nubank](https://nubank.com.br/) in Rio de Janeiro, Brazil. Previously I spent 5+ years at [Grupo OLX](https://www.olx.com.br/) — Latin America's largest classifieds platform — where I worked across payments, FinOps, Server-Driven UI, and automotive financing.
 
 I hold a Bachelor's degree in Information Systems from Universidade Federal Fluminense (2017-2023).
 
