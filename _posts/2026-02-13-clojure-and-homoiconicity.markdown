@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "Clojure and Homoiconicity: When Code Is Data"
-date:   2026-02-13 12:00:00 -0300
-categories: programming languages
+title: "Clojure and Homoiconicity: When Code Is Data"
+date: 2026-02-13
+tags:
+  - programming
+  - languages
+permalink: /posts/2026/02/clojure-and-homoiconicity/
 ---
 
 If you've spent enough time around Lisps, you've probably heard the phrase *"code is data"*. It sounds like a platitude until you actually experience it. Clojure, a modern Lisp hosted on the JVM, makes this idea tangible through a property called **homoiconicity** — and once you internalize it, it changes how you think about programming languages in general.
