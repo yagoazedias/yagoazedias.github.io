@@ -22,7 +22,7 @@ repository               : "yagoazedias/yagoazedias.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : # no profile photo
   name             : "Yago Azedias"
   pronouns         : # example: "he/him"
   bio              : "Senior Software Engineer at Nubank. Ex-OLX. Bachelor's in Information Systems."
@@ -73,7 +73,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : "yagoazedias"
+  twitter          : # Username for X / Twitter
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
