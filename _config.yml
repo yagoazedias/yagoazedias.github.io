@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Yago Azedias"
 title_separator          : "-"
 name                     : &name "Yago Azedias"
-description              : &description "Staff Software Engineer at OLX Brasil"
+description              : &description "Senior Software Engineer at Nubank | ex-OLX | Bachelor's in Information Systems"
 url                      : https://blog.yagoazedias.com
 baseurl                  : ""
 repository               : "yagoazedias/yagoazedias.github.io"
@@ -25,9 +25,9 @@ author:
   avatar           : "profile.png"
   name             : "Yago Azedias"
   pronouns         : # example: "he/him"
-  bio              : "Staff Software Engineer at OLX Brasil. Passionate about software architecture, distributed systems, and functional programming."
-  location         : "Brazil"
-  employer         : "OLX Brasil"
+  bio              : "Senior Software Engineer at Nubank. Ex-OLX. Bachelor's in Information Systems."
+  location         : "Rio de Janeiro, Brazil"
+  employer         : "Nubank"
   uri              : # URL
   email            : "yagoazedias@gmail.com"
 

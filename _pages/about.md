@@ -7,18 +7,27 @@ redirect_from:
   - /about.html
 ---
 
-### Hi there
-
 ## Who Am I?
-Hey! My name is Yago Luis Azedias de Melo and I'm currently a software engineer at OLX Brasil and a passionate developer.
 
-- I'm currently working on the biggest classifieds site of the entire Latin America called OLX. I work in the payments engineering team which is responsible for all website shopping
-- I'm currently learning more about software architecture and focusing my code skill on Python, Golang and Javascript with React/Redux
-- Ask me about anything related to technology, developer career and stuff
-- How to reach me: You can reach me on every social network with the following username: @yagoazedias (it also applies to telegram)
+Hey! My name is Yago Azedias. I'm a Senior Software Engineer at [Nubank](https://nubank.com.br/) in Rio de Janeiro, Brazil. Previously I spent 3+ years at [Grupo OLX](https://www.olx.com.br/) — Latin America's largest classifieds platform — where I worked across payments, FinOps, Server-Driven UI, and automotive financing.
 
-You can find me at GitHub:
-[github](https://github.com/yagoazedias)
+I hold a Bachelor's degree in Information Systems from Universidade Federal Fluminense (2017-2023).
 
-You can find me at Linkedin:
-[linkedin](https://www.linkedin.com/in/yagoazedias/)
+## What I work with
+
+Throughout my career I've worked with a wide range of technologies including Python, Golang, Kotlin, Clojure, Node.js, React, Flutter, and AWS. I'm passionate about software architecture, distributed systems, event-driven design, and functional programming.
+
+## Highlights
+
+- Led FinOps initiatives at OLX saving hundreds of thousands of dollars annually in cloud spend
+- Built and maintained a Server-Driven UI platform (Kotlin, Node.js, AWS DocumentDB)
+- Led Pix payment integration and built scalable event-driven systems at OLX Payments
+- Integrated digital wallets (Apple Pay, Google Pay, Samsung Pay) at Nubank with Mastercard Token Connect
+- Built React Native apps and Kubernetes-based infrastructure at Bemobi
+
+## Awards
+
+- Hackanoel 2016 Regional Winner
+- 1st Place Hackathon UNIRIO
+- Hackathon UCB Honorable Mention
+- hacking.rio Finalist
