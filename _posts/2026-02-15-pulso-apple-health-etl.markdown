@@ -54,6 +54,24 @@ The schema normalizes into **16 tables** across lookup, dimension, and fact cate
 - **Correlations:** `correlation`, `correlation_metadata`, `correlation_record`
 - **Activity:** `activity_summary`
 
+## From Raw Data to Insights
+
+Once your data is in PostgreSQL, Pulso comes with **Metabase** — an open-source BI tool for interactive analysis without writing SQL.
+
+**Active Energy Burned vs Goal Energy Burned**
+
+Track how your actual calorie burn compares to your daily goals over time. Perfect for fitness trending.
+
+![Active Energy Burned vs Goal](/images/pulso-active-energy.png)
+
+**Workout Route Patterns**
+
+Discover when you're most active. This dashboard shows which days of the week you add workout routes, revealing patterns in your exercise habits.
+
+![Workout Routes by Weekday](/images/pulso-workout-routes.png)
+
+All Metabase dashboards are interactive, filterable, and shareable. Run `docker compose up` and you get a fully functional analytics stack at `http://localhost:3000`.
+
 ## Production-Ready Out of the Box
 
 What made this feasible in an afternoon was not cutting corners, but leveraging the right tools:
