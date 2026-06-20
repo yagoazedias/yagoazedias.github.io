@@ -45,3 +45,53 @@ objects that the garbage collector considered reachable and useful.
 
 The heap was full because it was supposed to be full. I just hadn't understood
 why yet.
+
+## The Datomic Peer Is a Cache
+
+To understand what happened, you need to understand what the Datomic Peer
+library actually is — and it's not what most database client libraries are.
+
+In a traditional database setup — PostgreSQL, MySQL, MongoDB — the client
+library is essentially a thin messenger. It serializes your query, sends it over
+a socket, waits for the server to execute it, and deserializes the result. The
+client holds no data. The server is responsible for caching (PostgreSQL's
+`shared_buffers`, MySQL's buffer pool, MongoDB's WiredTiger cache). Your
+application's memory footprint is determined by your application logic, not the
+database driver.
+
+Datomic inverts this model. The Peer library is not a thin client — it is a
+**local read cache** that runs in-process alongside your application. It holds an
+LRU cache of index segments: immutable chunks of Datomic's persistent sorted
+index, each typically covering a few thousand datoms. When you run a query
+(`d/q`) or pull an entity (`d/pull`), Datomic checks this local cache first. On
+a hit, the answer comes from memory — no network round-trip, no Transactor
+involvement. On a miss, it fetches the segment from Memcached (if configured) or
+directly from storage, stores it locally, and answers from there.
+
+```
+Traditional DB:
+  App → [thin driver] → network → [server: buffer pool] → disk
+
+Datomic:
+  App → [peer: object cache (LRU, in JVM heap)] → [Memcached] → [storage] → disk
+                ↑
+        reads never touch the Transactor
+```
+
+The cache is bounded by a JVM system property called `datomic.ObjectCacheMax`,
+which defaults to a fraction of the available heap. This means that **`-Xmx`
+— your JVM heap ceiling — is also your read cache ceiling.** Giving the peer
+more heap directly increases the number of index segments it can hold, which
+increases the cache hit rate, which lowers read latency under load.
+
+This is documented in [Datomic's caching documentation](https://docs.datomic.com/operation/caching.html),
+but it's easy to miss if you approach Datomic as just another database with a
+client library. The mental model shift is significant: when you size your peer
+application's heap, you're making a caching decision, not just a "how much
+memory does my app use" decision.
+
+One more thing worth noting: each peer process has its own independent object
+cache. Two peer instances running the same query warm their caches separately.
+In production this is actually a strength — reads are purely local, they never
+go through the Transactor, and you can scale read capacity by adding peer
+processes without any shared bottleneck.
