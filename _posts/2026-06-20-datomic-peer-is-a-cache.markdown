@@ -79,7 +79,7 @@ Datomic:
 ```
 
 The cache is bounded by a JVM system property called `datomic.ObjectCacheMax`,
-which defaults to a fraction of the available heap. This means that **`-Xmx`
+which defaults to 25% of the JVM heap. This means that **`-Xmx`
 — your JVM heap ceiling — is also your read cache ceiling.** Giving the peer
 more heap directly increases the number of index segments it can hold, which
 increases the cache hit rate, which lowers read latency under load.
@@ -120,3 +120,45 @@ entirely, capped at ~500 tx/s regardless of read pressure.
 The two bottlenecks are architecturally independent: write throughput is limited
 by the Transactor's commit loop; read latency under high concurrency is limited
 by the peer's object cache size (i.e., `-Xmx`).
+
+## Bonus Gotcha: `deploy.resources.limits` Is a Swarm-Only Field
+
+While investigating, I noticed the `docker-compose.yml` had memory limits
+defined — so why weren't they enforced?
+
+```yaml
+# This is silently ignored in docker compose up (non-Swarm mode):
+deploy:
+  resources:
+    limits:
+      memory: 8G
+
+# This actually works:
+mem_limit: 4g
+```
+
+The `deploy.resources.limits` field is a Docker Swarm concept. In regular
+`docker compose up`, it is silently ignored. The containers ran without any
+memory ceiling, allowing the JVMs to grow freely to their `-Xmx` limits. Using
+`mem_limit` at the service level is the correct way to cap memory in a standard
+Compose setup.
+
+## Takeaways
+
+**`-Xmx` sizes your read cache.** When running a Datomic peer application, heap
+sizing is not just about "how much memory does my app need" — it's a caching
+decision. More heap means more index segments in the object cache, which means
+higher cache hit rates and lower read latency under concurrent load.
+
+**Multiple peers mean multiple independent caches.** Unlike a shared Memcached
+cluster, each peer warms its own object cache independently. Adding a peer
+process adds read capacity without contention on a shared layer. The [Datomic
+caching docs](https://docs.datomic.com/operation/caching.html) describe how
+Memcached and Valcache can optionally sit between the object cache and storage
+for larger deployments — but the local cache is always the first layer.
+
+**Honest benchmarks need enforced resource limits.** `deploy.resources.limits`
+in Docker Compose is a Swarm-only directive. Use `mem_limit` to actually cap
+containers when running locally. Without it, the JVMs ran uncapped and
+consumed whatever the host could give them — which made the benchmark less
+reproducible and harder to reason about.
