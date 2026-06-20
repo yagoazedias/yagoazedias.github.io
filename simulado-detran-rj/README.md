@@ -55,8 +55,36 @@ Edite apenas `data/questions.json`. Cada questão tem o formato:
 - As alternativas são embaralhadas automaticamente a cada simulado.
 - O critério de aprovação fica em `meta.aprovacao_percentual` (padrão: 70%).
 
-Se você obtiver um banco de questões **licenciado** para uso, basta substituir
-o `questions.json` mantendo esse formato — nada mais precisa mudar.
+### Leitor flexível: trocar o banco por outro arquivo
+
+O `js/app.js` normaliza automaticamente dois formatos de `data/questions.json`,
+então você pode substituir o arquivo por outro sem mexer no código:
+
+1. **Formato deste projeto** (acima): `{ "meta": {...}, "questoes": [ ... ] }`,
+   com `opcoes` como lista de strings e `resposta` como índice.
+
+2. **Formato com alternativas em objeto** — um array (ou `{ "questoes": [...] }`)
+   de questões assim:
+
+   ```json
+   {
+     "enunciado": "Texto da pergunta?",
+     "imagem": "https://.../placa.png",
+     "opcoes": [
+       { "texto": "Alternativa", "correta": false },
+       { "texto": "Alternativa correta", "correta": true }
+     ]
+   }
+   ```
+
+   Campos opcionais reconhecidos: `categoria`/`tema`, `explicacao`/`justificativa`
+   e `imagem` (exibida acima das alternativas). Se quiser usar um banco já
+   estruturado nesse formato (por exemplo, gerado por um crawler do simulador
+   oficial), basta baixá-lo e salvá-lo como `data/questions.json`.
+
+> Observação: as questões oficiais do DETRAN/SENATRAN têm direitos do órgão
+> público. Reutilize qualquer banco externo por sua conta, verificando a
+> permissão de uso. O conteúdo versionado **neste** projeto é autoral (base CTB).
 
 ## Categorias cobertas
 

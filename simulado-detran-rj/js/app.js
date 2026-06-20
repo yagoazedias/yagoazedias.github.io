@@ -43,8 +43,7 @@
         return r.json();
       })
       .then(function (data) {
-        state.banco = data.questoes || [];
-        state.meta = data.meta || {};
+        normalizarBanco(data);
         popularCategorias();
       })
       .catch(function (err) {
@@ -53,6 +52,46 @@
           err.message + ").</p><p>Se estiver abrindo o arquivo direto do disco, " +
           "publique em um servidor (ex.: GitHub Pages) para que o navegador permita o carregamento.</p>";
       });
+  }
+
+  // Aceita diferentes formatos de arquivo e normaliza para o formato interno:
+  //   { categoria, pergunta, explicacao, imagem, opcoes: [{ texto, correta }] }
+  // Formatos suportados:
+  //   (a) { meta, questoes: [{ categoria, pergunta, opcoes: [str], resposta: idx, explicacao }] }
+  //   (b) array (ou { questoes/questions }) de { enunciado, imagem, opcoes: [{ texto, correta }] }
+  function normalizarBanco(data) {
+    var lista = Array.isArray(data) ? data : (data.questoes || data.questions || []);
+    state.meta = (data && !Array.isArray(data) && data.meta) ? data.meta : {};
+    state.banco = lista.map(normalizarQuestao).filter(Boolean);
+  }
+
+  function normalizarQuestao(q) {
+    if (!q) return null;
+    var pergunta = q.pergunta || q.enunciado || q.titulo || "";
+    var categoria = q.categoria || q.tema || q.assunto || "Trânsito";
+    var explicacao = q.explicacao || q.justificativa || "";
+    var imagem = q.imagem || q.image || "";
+    var opcoes;
+
+    if (Array.isArray(q.opcoes) && q.opcoes.length && typeof q.opcoes[0] === "object") {
+      // formato com objetos { texto, correta }
+      opcoes = q.opcoes.map(function (o) {
+        return {
+          texto: o.texto != null ? o.texto : o.text,
+          correta: !!(o.correta || o.correto || o.correct)
+        };
+      });
+    } else {
+      // formato com lista de strings + índice da alternativa correta
+      var textos = q.opcoes || q.alternativas || q.options || [];
+      var idx = q.resposta != null ? q.resposta
+              : (q.gabarito != null ? q.gabarito : q.correta);
+      opcoes = textos.map(function (t, i) { return { texto: t, correta: i === idx }; });
+    }
+
+    var temCorreta = opcoes.some(function (o) { return o.correta; });
+    if (!pergunta || !opcoes.length || !temCorreta) return null;
+    return { categoria: categoria, pergunta: pergunta, explicacao: explicacao, imagem: imagem, opcoes: opcoes };
   }
 
   function popularCategorias() {
@@ -80,13 +119,13 @@
 
     // embaralha as opções de cada questão, mantendo o controle da correta
     state.prova = selecionadas.map(function (q) {
-      var opcoes = q.opcoes.map(function (texto, idx) {
-        return { texto: texto, correta: idx === q.resposta };
-      });
-      opcoes = embaralhar(opcoes);
+      var opcoes = embaralhar(q.opcoes.map(function (o) {
+        return { texto: o.texto, correta: o.correta };
+      }));
       return {
         categoria: q.categoria,
         pergunta: q.pergunta,
+        imagem: q.imagem,
         opcoes: opcoes,
         explicacao: q.explicacao,
         indiceCorreto: opcoes.findIndex(function (o) { return o.correta; })
@@ -123,6 +162,15 @@
     $("quiz-progress-bar").style.width = ((state.atual) / total * 100) + "%";
     $("quiz-categoria").textContent = q.categoria;
     $("quiz-pergunta").textContent = q.pergunta;
+
+    var img = $("quiz-imagem");
+    if (q.imagem) {
+      img.innerHTML = '<img src="' + q.imagem + '" alt="Imagem da questão" loading="lazy" />';
+      img.classList.remove("hidden");
+    } else {
+      img.innerHTML = "";
+      img.classList.add("hidden");
+    }
 
     var ul = $("quiz-opcoes");
     ul.innerHTML = "";
@@ -256,7 +304,7 @@
         html += '<p class="review__a right">Correta: ' + LETRAS[q.indiceCorreto] + ") " +
           q.opcoes[q.indiceCorreto].texto + "</p>";
       }
-      html += '<p class="review__exp">💡 ' + q.explicacao + "</p>";
+      if (q.explicacao) html += '<p class="review__exp">💡 ' + q.explicacao + "</p>";
       div.innerHTML = html;
       rev.appendChild(div);
     });
