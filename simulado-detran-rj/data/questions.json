@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "titulo": "Simulado DETRAN-RJ — Exame Teórico",
+    "descricao": "Banco de questões de prática autoral, elaborado com base no Código de Trânsito Brasileiro (Lei nº 9.503/1997) e nas resoluções do CONTRAN. Não são as questões oficiais aplicadas pelo DETRAN-RJ.",
+    "fonte": "Código de Trânsito Brasileiro (CTB) e Resoluções do CONTRAN",
+    "aprovacao_percentual": 70,
+    "questoes_por_prova": 30,
+    "atualizado_em": "2026-06-20"
+  },
+  "questoes": [
+    {
+      "id": 1,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Qual é a idade mínima para obter a Carteira Nacional de Habilitação na categoria B?",
+      "opcoes": ["16 anos", "17 anos", "18 anos", "21 anos"],
+      "resposta": 2,
+      "explicacao": "O CTB exige idade mínima de 18 anos para a habilitação. A categoria B autoriza a condução de veículos de até 3.500 kg e até 8 lugares, além do condutor."
+    },
+    {
+      "id": 2,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Para um condutor com menos de 50 anos de idade, qual é o prazo de validade da CNH?",
+      "opcoes": ["3 anos", "5 anos", "10 anos", "Indeterminado"],
+      "resposta": 2,
+      "explicacao": "Pela Lei nº 14.071/2021, a CNH é válida por 10 anos para condutores com menos de 50 anos, 5 anos entre 50 e 70 anos, e 3 anos para 70 anos ou mais."
+    },
+    {
+      "id": 3,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Quais documentos o condutor é obrigado a portar ao dirigir?",
+      "opcoes": ["Apenas a CNH", "CNH e CRLV", "Apenas o RG", "CNH e comprovante de residência"],
+      "resposta": 1,
+      "explicacao": "É obrigatório portar a CNH (ou Permissão para Dirigir) e o Certificado de Registro e Licenciamento do Veículo (CRLV). Ambos podem ser apresentados em formato digital."
+    },
+    {
+      "id": 4,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Sobre a ingestão de álcool e a direção, o que diz a legislação brasileira?",
+      "opcoes": ["É permitido até uma taça de vinho", "Há tolerância de 0,2 g/L de sangue", "Existe tolerância zero: qualquer concentração de álcool é infração", "Só é infração se o condutor estiver visivelmente embriagado"],
+      "resposta": 2,
+      "explicacao": "Vigora a tolerância zero. Qualquer concentração de álcool já configura infração gravíssima; a partir de determinados níveis (0,34 mg/L de ar ou 0,6 g/L de sangue) configura-se também crime de trânsito."
+    },
+    {
+      "id": 5,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Qual é a velocidade máxima em uma via local urbana quando não houver sinalização indicando outro limite?",
+      "opcoes": ["30 km/h", "40 km/h", "50 km/h", "60 km/h"],
+      "resposta": 0,
+      "explicacao": "Na ausência de sinalização, as velocidades máximas são: 30 km/h nas vias locais, 40 km/h nas coletoras, 60 km/h nas arteriais e 80 km/h nas vias de trânsito rápido."
+    },
+    {
+      "id": 6,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "A que distância mínima de uma esquina é proibido estacionar?",
+      "opcoes": ["3 metros", "5 metros", "8 metros", "10 metros"],
+      "resposta": 1,
+      "explicacao": "É proibido estacionar a menos de 5 metros do bordo do alinhamento da via transversal (esquina), pois compromete a visibilidade e a segurança no cruzamento."
+    },
+    {
+      "id": 7,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Como deve ser transportada uma criança de até 10 anos de idade?",
+      "opcoes": ["No banco da frente, com cinto", "No banco traseiro, com o dispositivo de retenção adequado à idade", "No colo de um adulto no banco traseiro", "Em qualquer banco, desde que use cinto"],
+      "resposta": 1,
+      "explicacao": "Crianças com até 10 anos devem ser transportadas no banco traseiro usando o dispositivo de retenção apropriado (bebê conforto, cadeirinha ou assento de elevação) conforme a idade, peso e altura."
+    },
+    {
+      "id": 8,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Recusar-se a fazer o teste do bafômetro (etilômetro) quando solicitado pela autoridade de trânsito:",
+      "opcoes": ["Não gera penalidade, pois ninguém é obrigado a produzir prova contra si", "É infração gravíssima, com multa e suspensão do direito de dirigir", "Gera apenas advertência por escrito", "É permitido se o condutor não tiver bebido"],
+      "resposta": 1,
+      "explicacao": "A recusa é infração gravíssima, sujeitando o condutor à multa (multiplicada) e à suspensão do direito de dirigir por 12 meses, com as mesmas penalidades de quem dirige sob influência de álcool."
+    },
+    {
+      "id": 9,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Qual categoria de habilitação autoriza a conduzir motocicletas?",
+      "opcoes": ["Categoria A", "Categoria B", "Categoria C", "Categoria E"],
+      "resposta": 0,
+      "explicacao": "A categoria A autoriza a condução de veículos motorizados de duas ou três rodas, com ou sem carro lateral (motocicletas, motonetas e triciclos)."
+    },
+    {
+      "id": 10,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Qual é o prazo de validade da Permissão para Dirigir (PPD), concedida ao condutor recém-habilitado?",
+      "opcoes": ["6 meses", "1 ano", "2 anos", "5 anos"],
+      "resposta": 1,
+      "explicacao": "A Permissão para Dirigir tem validade de 1 ano. Ao final do período, o condutor obtém a CNH definitiva se não tiver cometido infração de natureza grave ou gravíssima, nem for reincidente em infração média."
+    },
+    {
+      "id": 11,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "Em regra, ao atingir quantos pontos em 12 meses (havendo duas ou mais infrações gravíssimas) o condutor pode ter a CNH suspensa?",
+      "opcoes": ["10 pontos", "20 pontos", "30 pontos", "40 pontos"],
+      "resposta": 1,
+      "explicacao": "Pela Lei nº 14.071/2021, o limite é de 20 pontos quando houver duas ou mais infrações gravíssimas, 30 pontos com uma gravíssima e 40 pontos quando não houver nenhuma gravíssima no período."
+    },
+    {
+      "id": 12,
+      "categoria": "Legislação de Trânsito",
+      "pergunta": "O uso do cinto de segurança é obrigatório para:",
+      "opcoes": ["Apenas o condutor", "Condutor e passageiro da frente", "Todos os ocupantes do veículo", "Apenas em rodovias"],
+      "resposta": 2,
+      "explicacao": "O cinto de segurança é de uso obrigatório para todos os ocupantes do veículo, em vias urbanas e rurais. Conduzir sem cinto é infração grave."
+    },
+    {
+      "id": 13,
+      "categoria": "Direção Defensiva",
+      "pergunta": "O que é direção defensiva?",
+      "opcoes": ["Dirigir sempre na defensiva, abaixo do limite de velocidade", "Conduzir de modo a prevenir acidentes, apesar das ações erradas dos outros e das condições adversas", "Dirigir agressivamente para se impor no trânsito", "Confiar que os outros condutores seguirão as regras"],
+      "resposta": 1,
+      "explicacao": "Direção defensiva é dirigir de forma a evitar acidentes, antecipando situações de risco e considerando as falhas dos demais e as condições adversas de via, clima, veículo e do próprio condutor."
+    },
+    {
+      "id": 14,
+      "categoria": "Direção Defensiva",
+      "pergunta": "A 'regra dos dois segundos' serve para:",
+      "opcoes": ["Calcular o tempo de troca de marcha", "Manter uma distância de seguimento segura do veículo da frente", "Definir o tempo máximo no semáforo amarelo", "Medir o tempo de reação ao álcool"],
+      "resposta": 1,
+      "explicacao": "A regra dos dois segundos ajuda a manter distância segura: ao ver o veículo da frente passar por um ponto fixo, conte 'mil e um, mil e dois'. Se você passar pelo mesmo ponto antes, está muito próximo."
+    },
+    {
+      "id": 15,
+      "categoria": "Direção Defensiva",
+      "pergunta": "Em caso de aquaplanagem (o veículo 'flutua' sobre uma lâmina de água), o que se deve fazer?",
+      "opcoes": ["Frear bruscamente", "Acelerar para sair da água", "Tirar o pé do acelerador, segurar firme a direção e não frear bruscamente", "Girar o volante rapidamente para um dos lados"],
+      "resposta": 2,
+      "explicacao": "Na aquaplanagem os pneus perdem contato com o solo. Deve-se tirar o pé do acelerador, manter a direção firme e sem movimentos bruscos, evitando frear de repente, até que os pneus voltem a aderir à pista."
+    },
+    {
+      "id": 16,
+      "categoria": "Direção Defensiva",
+      "pergunta": "Ao dirigir sob neblina ou cerração intensa, o correto é utilizar:",
+      "opcoes": ["O farol alto, para enxergar mais longe", "O farol baixo e reduzir a velocidade", "Apenas o pisca-alerta, parado na pista", "Nenhuma luz, para não ofuscar"],
+      "resposta": 1,
+      "explicacao": "Sob neblina deve-se usar o farol baixo (o alto reflete nas gotículas e ofusca a visão) e os faróis de neblina, se houver, além de reduzir a velocidade e aumentar a distância de seguimento."
+    },
+    {
+      "id": 17,
+      "categoria": "Direção Defensiva",
+      "pergunta": "O 'ponto cego' de um veículo é:",
+      "opcoes": ["A área diretamente à frente do capô", "A região que o condutor não consegue ver pelos espelhos retrovisores", "O local onde fica o motor", "A parte do para-brisa com defeito"],
+      "resposta": 1,
+      "explicacao": "Ponto cego é a área ao redor do veículo que não é alcançada pelos espelhos retrovisores. Antes de mudar de faixa, deve-se olhar rapidamente por cima do ombro para conferir esse espaço."
+    },
+    {
+      "id": 18,
+      "categoria": "Direção Defensiva",
+      "pergunta": "Ao sentir sono ou fadiga durante uma viagem, o condutor deve:",
+      "opcoes": ["Aumentar a velocidade para chegar logo", "Tomar bebidas alcoólicas para relaxar", "Parar em local seguro para descansar", "Abrir a janela e continuar dirigindo normalmente"],
+      "resposta": 2,
+      "explicacao": "O sono e a fadiga reduzem drasticamente os reflexos e a atenção. A única medida segura é parar em local apropriado para descansar; truques como abrir a janela não eliminam o risco."
+    },
+    {
+      "id": 19,
+      "categoria": "Direção Defensiva",
+      "pergunta": "A ultrapassagem de outro veículo, em regra, deve ser feita:",
+      "opcoes": ["Pela direita, sempre", "Pela esquerda, com segurança e visibilidade, retornando à faixa em seguida", "Pelo acostamento", "Em qualquer lado, desde que rápido"],
+      "resposta": 1,
+      "explicacao": "A ultrapassagem deve ser feita pela esquerda, somente quando houver visibilidade e espaço suficientes, sinalizando a manobra e retornando à faixa de origem com segurança. É proibido ultrapassar pelo acostamento."
+    },
+    {
+      "id": 20,
+      "categoria": "Direção Defensiva",
+      "pergunta": "São considerados elementos básicos da direção defensiva:",
+      "opcoes": ["Velocidade, potência e aceleração", "Conhecimento, atenção, previsão, habilidade e ação", "Pressa, ousadia e reflexo", "Apenas a experiência do condutor"],
+      "resposta": 1,
+      "explicacao": "Os cinco elementos fundamentais da direção defensiva são: conhecimento (das regras e do veículo), atenção, previsão (antecipar riscos), habilidade e ação (decisão correta no momento certo)."
+    },
+    {
+      "id": 21,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Qual é o número de telefone do SAMU para emergências médicas?",
+      "opcoes": ["190", "192", "193", "199"],
+      "resposta": 1,
+      "explicacao": "O SAMU (Serviço de Atendimento Móvel de Urgência) atende pelo 192. O 193 é o Corpo de Bombeiros, o 190 a Polícia Militar e o 191 a Polícia Rodoviária Federal."
+    },
+    {
+      "id": 22,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Ao prestar socorro em um acidente, qual deve ser a primeira providência?",
+      "opcoes": ["Remover imediatamente todas as vítimas", "Sinalizar o local para evitar novos acidentes e acionar o socorro", "Dar água às vítimas", "Tirar fotos para registrar o ocorrido"],
+      "resposta": 1,
+      "explicacao": "A primeira atitude é garantir a segurança do local: sinalizar com o triângulo e o pisca-alerta para evitar novos acidentes e, em seguida, acionar o socorro especializado (192/193)."
+    },
+    {
+      "id": 23,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Em relação ao capacete de um motociclista acidentado, o socorrista leigo deve:",
+      "opcoes": ["Removê-lo imediatamente em qualquer situação", "Não removê-lo, salvo se for indispensável para manter as vias aéreas/respiração", "Apertá-lo melhor na cabeça da vítima", "Removê-lo somente se a vítima pedir"],
+      "resposta": 1,
+      "explicacao": "Em regra, não se deve remover o capacete, pois a manobra pode agravar lesões na coluna cervical. A retirada só se justifica quando for imprescindível para garantir a respiração, e idealmente por profissionais."
+    },
+    {
+      "id": 24,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Diante de uma vítima de acidente, mover seu corpo do local é recomendado:",
+      "opcoes": ["Sempre, para deixá-la mais confortável", "Nunca, em nenhuma hipótese", "Apenas em caso de risco iminente, como incêndio ou risco de explosão", "Somente se ela estiver inconsciente"],
+      "resposta": 2,
+      "explicacao": "A vítima não deve ser movida, para evitar agravar possíveis lesões na coluna, exceto quando houver risco iminente de morte no local (incêndio, vazamento, risco de explosão)."
+    },
+    {
+      "id": 25,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Em uma hemorragia externa visível, a primeira medida de contenção é:",
+      "opcoes": ["Aplicar compressão direta sobre o ferimento com pano limpo", "Esfregar terra sobre o local", "Dar bastante água à vítima", "Aguardar o sangramento parar sozinho"],
+      "resposta": 0,
+      "explicacao": "A medida inicial para conter hemorragia externa é a compressão direta sobre o ferimento com um pano limpo ou gaze, mantendo a pressão até a chegada do socorro especializado."
+    },
+    {
+      "id": 26,
+      "categoria": "Primeiros Socorros",
+      "pergunta": "Qual é o número do Corpo de Bombeiros?",
+      "opcoes": ["190", "192", "193", "194"],
+      "resposta": 2,
+      "explicacao": "O Corpo de Bombeiros é acionado pelo 193, indicado em situações como incêndios, vítimas presas em ferragens e resgates."
+    },
+    {
+      "id": 27,
+      "categoria": "Meio Ambiente e Cidadania",
+      "pergunta": "Qual prática contribui para reduzir a poluição causada pelos veículos?",
+      "opcoes": ["Acelerar bruscamente com frequência", "Manter o motor e o sistema de escapamento em boas condições de manutenção", "Adulterar o escapamento para 'ganhar potência'", "Deixar o motor ligado parado por longos períodos"],
+      "resposta": 1,
+      "explicacao": "A manutenção regular do motor, da injeção e do escapamento reduz a emissão de gases poluentes e o consumo de combustível. Adulterar o escapamento e acelerar bruscamente aumentam a poluição."
+    },
+    {
+      "id": 28,
+      "categoria": "Meio Ambiente e Cidadania",
+      "pergunta": "Sobre o uso da buzina, o CTB determina que:",
+      "opcoes": ["Pode ser usada livremente, a qualquer hora", "Deve ser usada apenas em toques breves, para advertir e evitar acidentes, sendo proibida em locais e horários de silêncio", "Serve para apressar o veículo da frente", "É proibida em qualquer situação"],
+      "resposta": 1,
+      "explicacao": "A buzina deve ser usada somente em toque breve, como advertência para evitar acidentes, e é proibida entre as 22h e 6h, em áreas residenciais e próximas a hospitais e escolas."
+    },
+    {
+      "id": 29,
+      "categoria": "Meio Ambiente e Cidadania",
+      "pergunta": "Na aproximação de uma faixa de pedestres sem semáforo, o condutor deve:",
+      "opcoes": ["Buzinar para o pedestre se apressar", "Dar a preferência ao pedestre, reduzindo a velocidade ou parando", "Acelerar para passar antes", "Seguir normalmente, pois o veículo tem preferência"],
+      "resposta": 1,
+      "explicacao": "O pedestre tem prioridade na faixa. O condutor deve reduzir a velocidade e, se necessário, parar para dar passagem a quem está atravessando ou prestes a atravessar na faixa."
+    },
+    {
+      "id": 30,
+      "categoria": "Meio Ambiente e Cidadania",
+      "pergunta": "A poluição sonora no trânsito está associada principalmente a:",
+      "opcoes": ["Uso de cintos de segurança", "Ruído excessivo de buzinas, escapamentos alterados e som automotivo em volume alto", "Uso de faróis baixos durante o dia", "Manutenção preventiva do veículo"],
+      "resposta": 1,
+      "explicacao": "A poluição sonora decorre do uso abusivo da buzina, de escapamentos adulterados e de equipamentos de som em volume excessivo, prejudicando a saúde e o bem-estar das pessoas."
+    },
+    {
+      "id": 31,
+      "categoria": "Meio Ambiente e Cidadania",
+      "pergunta": "Cidadania no trânsito significa, entre outras atitudes:",
+      "opcoes": ["Impor-se aos demais para andar mais rápido", "Respeitar pedestres, ciclistas e demais condutores, cedendo a vez quando necessário", "Estacionar em vagas reservadas quando estiverem livres", "Usar o celular ao volante apenas em trechos vazios"],
+      "resposta": 1,
+      "explicacao": "Cidadania no trânsito é a convivência baseada no respeito mútuo: respeitar a vez do outro, proteger os mais vulneráveis (pedestres e ciclistas) e cumprir as regras em benefício da segurança coletiva."
+    },
+    {
+      "id": 32,
+      "categoria": "Mecânica Básica",
+      "pergunta": "A calibragem dos pneus deve, preferencialmente, ser verificada:",
+      "opcoes": ["Com os pneus quentes, após uma longa viagem", "Com os pneus frios, seguindo a pressão recomendada pelo fabricante", "Apenas quando o pneu estiver visivelmente murcho", "Uma vez por ano"],
+      "resposta": 1,
+      "explicacao": "A calibragem deve ser feita com os pneus frios, respeitando a pressão indicada pelo fabricante (manual ou etiqueta na coluna da porta). Pneus mal calibrados afetam a segurança, o consumo e a durabilidade."
+    },
+    {
+      "id": 33,
+      "categoria": "Mecânica Básica",
+      "pergunta": "Quando uma luz vermelha acende no painel do veículo, isso geralmente indica:",
+      "opcoes": ["Apenas uma informação sem importância", "Uma situação grave que exige atenção imediata, como parar e verificar", "Que o veículo está economizando combustível", "Que é hora de acelerar"],
+      "resposta": 1,
+      "explicacao": "Luzes vermelhas no painel indicam alertas graves (pressão do óleo, temperatura do motor, freios, bateria). Diante delas, o ideal é parar em local seguro e verificar o problema para evitar danos sérios."
+    },
+    {
+      "id": 34,
+      "categoria": "Mecânica Básica",
+      "pergunta": "São equipamentos obrigatórios que o veículo deve portar:",
+      "opcoes": ["Extintor de luxo e kit de ferramentas completo", "Estepe, triângulo de sinalização, macaco e chave de roda", "Apenas o triângulo", "Câmera de ré e sensor de estacionamento"],
+      "resposta": 1,
+      "explicacao": "Entre os equipamentos obrigatórios estão o estepe (pneu de reserva), o triângulo de sinalização, o macaco e a chave de roda compatíveis com o veículo, essenciais para troca de pneu e sinalização em emergências."
+    },
+    {
+      "id": 35,
+      "categoria": "Mecânica Básica",
+      "pergunta": "Para a segurança da frenagem, é importante verificar periodicamente:",
+      "opcoes": ["O nível do fluido de freio e o estado das pastilhas", "Apenas a cor da pintura", "O volume do rádio", "A pressão do estepe somente"],
+      "resposta": 0,
+      "explicacao": "O sistema de freios deve ser mantido em ordem: verificar o nível do fluido de freio, o desgaste das pastilhas e discos. Falhas no freio comprometem diretamente a capacidade de parar o veículo."
+    },
+    {
+      "id": 36,
+      "categoria": "Mecânica Básica",
+      "pergunta": "Se o indicador de temperatura mostrar superaquecimento do motor, o condutor deve:",
+      "opcoes": ["Acelerar para ventilar o motor", "Parar em local seguro e verificar o sistema de arrefecimento, sem abrir o radiador quente", "Abrir imediatamente a tampa do radiador quente", "Ignorar e seguir viagem"],
+      "resposta": 1,
+      "explicacao": "Em caso de superaquecimento, deve-se parar em local seguro e deixar o motor esfriar. Nunca abra a tampa do radiador com o motor quente, pois o líquido sob pressão pode causar queimaduras graves."
+    },
+    {
+      "id": 37,
+      "categoria": "Sinalização",
+      "pergunta": "Uma placa de formato octogonal (oito lados) e fundo vermelho significa:",
+      "opcoes": ["Dê a preferência", "Parada obrigatória (PARE)", "Velocidade máxima permitida", "Sentido proibido"],
+      "resposta": 1,
+      "explicacao": "A placa octogonal vermelha é a R-1 'PARE', que obriga o condutor a parar totalmente o veículo e só prosseguir após verificar que não há risco. É a única placa com esse formato."
+    },
+    {
+      "id": 38,
+      "categoria": "Sinalização",
+      "pergunta": "A placa em forma de triângulo com a ponta para baixo significa:",
+      "opcoes": ["Parada obrigatória", "Dê a preferência", "Proibido estacionar", "Cruzamento perigoso"],
+      "resposta": 1,
+      "explicacao": "O triângulo invertido (R-2) significa 'Dê a preferência': o condutor deve reduzir a velocidade e ceder passagem aos veículos da via preferencial, parando se necessário, mas sem a obrigação de parar sempre."
+    },
+    {
+      "id": 39,
+      "categoria": "Sinalização",
+      "pergunta": "As placas de regulamentação, em geral, têm formato:",
+      "opcoes": ["Losango amarelo", "Circular, com tarja vermelha, e impõem obrigações ou proibições", "Retangular verde", "Triangular azul"],
+      "resposta": 1,
+      "explicacao": "As placas de regulamentação são, em regra, circulares com orla vermelha e informam obrigações, proibições ou restrições. Desobedecê-las constitui infração de trânsito."
+    },
+    {
+      "id": 40,
+      "categoria": "Sinalização",
+      "pergunta": "As placas de advertência, que alertam para situações de perigo na via, têm a cor predominante:",
+      "opcoes": ["Vermelha", "Amarela, no formato de losango", "Verde", "Branca"],
+      "resposta": 1,
+      "explicacao": "As placas de advertência são amarelas, em formato de losango, e alertam o condutor sobre condições perigosas à frente, como curvas, lombadas, cruzamentos e travessias."
+    },
+    {
+      "id": 41,
+      "categoria": "Sinalização",
+      "pergunta": "Uma linha amarela contínua no centro da pista indica que:",
+      "opcoes": ["É permitido ultrapassar livremente", "É proibido ultrapassar e transpor a linha (separa sentidos opostos)", "Há uma faixa exclusiva de ônibus", "A via terminou"],
+      "resposta": 1,
+      "explicacao": "A linha amarela contínua separa fluxos de sentidos opostos e proíbe a ultrapassagem e a transposição. Já as linhas brancas organizam o tráfego de veículos no mesmo sentido."
+    },
+    {
+      "id": 42,
+      "categoria": "Sinalização",
+      "pergunta": "Quando o semáforo está na cor amarela, o condutor deve:",
+      "opcoes": ["Acelerar para passar antes do vermelho", "Ter atenção e parar, se puder fazê-lo com segurança", "Seguir normalmente, pois ainda pode passar", "Buzinar e prosseguir"],
+      "resposta": 1,
+      "explicacao": "A luz amarela significa atenção: o condutor deve parar, a menos que isso não seja possível com segurança (já muito próximo do cruzamento). Acelerar para 'pegar o amarelo' é uma atitude de risco."
+    },
+    {
+      "id": 43,
+      "categoria": "Sinalização",
+      "pergunta": "As placas de indicação, que orientam o condutor sobre direções, distâncias e serviços, costumam ter as cores:",
+      "opcoes": ["Vermelha e branca", "Amarela e preta", "Azul ou verde", "Laranja"],
+      "resposta": 2,
+      "explicacao": "As placas de indicação são geralmente azuis ou verdes e fornecem informações como nomes de localidades, distâncias, sentidos e serviços auxiliares (postos, hospitais, pontos turísticos)."
+    },
+    {
+      "id": 44,
+      "categoria": "Sinalização",
+      "pergunta": "Quando há um agente de trânsito orientando o tráfego em um cruzamento que também possui semáforo, o condutor deve obedecer:",
+      "opcoes": ["Sempre ao semáforo", "Sempre às placas", "À ordem do agente de trânsito, que prevalece sobre as demais", "Ao que for mais conveniente"],
+      "resposta": 2,
+      "explicacao": "Existe uma ordem de prevalência na sinalização: as ordens do agente de trânsito prevalecem sobre as demais; depois vêm a sinalização semafórica, as placas e marcas viárias, e por fim as normas gerais de circulação."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Simulado gratuito do exame teórico do DETRAN-RJ, com questões de prática baseadas no Código de Trânsito Brasileiro (CTB)." />
+  <meta name="theme-color" content="#0b6e4f" />
+  <title>Simulado DETRAN-RJ — Exame Teórico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <span class="brand">🚦 Simulado <strong>DETRAN-RJ</strong></span>
+      <span class="brand__tag">Exame Teórico</span>
+    </div>
+  </header>
+
+  <main class="container" id="app">
+    <!-- TELA INICIAL -->
+    <section id="screen-start" class="screen card">
+      <h1>Simulado do exame teórico</h1>
+      <p class="lead">
+        Pratique para a prova teórica do DETRAN-RJ com questões baseadas no
+        <strong>Código de Trânsito Brasileiro</strong>. Escolha o tema e a quantidade
+        de questões e teste seus conhecimentos.
+      </p>
+
+      <div class="field">
+        <label for="select-categoria">Tema</label>
+        <select id="select-categoria"></select>
+      </div>
+
+      <div class="field">
+        <label for="select-quantidade">Quantidade de questões</label>
+        <select id="select-quantidade">
+          <option value="10">10 questões (rápido)</option>
+          <option value="20">20 questões</option>
+          <option value="30" selected>30 questões (prova completa)</option>
+        </select>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="check-feedback" />
+        Mostrar se acertei logo após responder cada questão
+      </label>
+
+      <button id="btn-start" class="btn btn--primary btn--block">Iniciar simulado</button>
+
+      <p class="disclaimer">
+        ⚠️ Estas <strong>não são</strong> as questões oficiais do DETRAN-RJ. São questões
+        autorais de prática, elaboradas com base no CTB e nas resoluções do CONTRAN.
+        Para aprovação, considere o critério de <strong>70% de acertos</strong>.
+      </p>
+    </section>
+
+    <!-- TELA DO QUIZ -->
+    <section id="screen-quiz" class="screen card hidden">
+      <div class="quiz__top">
+        <span id="quiz-progress-label" class="quiz__counter">Questão 1 de 30</span>
+        <span id="quiz-timer" class="quiz__timer">00:00</span>
+      </div>
+      <div class="progress"><div id="quiz-progress-bar" class="progress__bar"></div></div>
+
+      <span id="quiz-categoria" class="badge"></span>
+      <h2 id="quiz-pergunta" class="quiz__question"></h2>
+      <div id="quiz-imagem" class="quiz__image hidden"></div>
+
+      <ul id="quiz-opcoes" class="options"></ul>
+
+      <div id="quiz-feedback" class="feedback hidden"></div>
+
+      <div class="quiz__nav">
+        <button id="btn-prev" class="btn btn--ghost">Voltar</button>
+        <button id="btn-next" class="btn btn--primary">Próxima</button>
+      </div>
+    </section>
+
+    <!-- TELA DE RESULTADO -->
+    <section id="screen-result" class="screen card hidden">
+      <div id="result-banner" class="result-banner"></div>
+      <h2 class="result__title">Resultado do simulado</h2>
+      <div class="result__score">
+        <div class="result__big"><span id="result-acertos">0</span><span class="result__total">/<span id="result-total">0</span></span></div>
+        <div class="result__pct"><span id="result-pct">0</span>% de acertos</div>
+        <div class="result__time">Tempo: <span id="result-tempo">00:00</span></div>
+      </div>
+
+      <div class="result__actions">
+        <button id="btn-toggle-review" class="btn btn--ghost">Ver revisão das questões</button>
+        <button id="btn-restart" class="btn btn--primary">Fazer outro simulado</button>
+      </div>
+
+      <div id="review" class="review hidden"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Feito para estudo · Questões autorais com base no Código de Trânsito Brasileiro (Lei nº 9.503/1997).</p>
+      <p>Prova oficial gratuita: app <strong>CNH Brasil</strong> (Governo Federal) ·
+        <a href="http://simulado.detran.rj.gov.br/" target="_blank" rel="noopener">simulador oficial DETRAN-RJ</a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
