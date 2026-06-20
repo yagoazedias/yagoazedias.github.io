@@ -95,3 +95,28 @@ cache. Two peer instances running the same query warm their caches separately.
 In production this is actually a strength — reads are purely local, they never
 go through the Transactor, and you can scale read capacity by adding peer
 processes without any shared bottleneck.
+
+## The Experiment as Proof
+
+Back to the load test. At 2,500 concurrent Locust users with `constant_pacing(1)`,
+that's roughly 2,500 read requests per second against a dataset that was growing
+with every write. Each `GET /read` triggered a `d/pull` on a random entity. Each
+entity read could miss the object cache and pull a new index segment from
+PostgreSQL into the peer's heap. The cache grew steadily until it hit the
+`-Xmx8g` ceiling. At that point, GC pressure spiked — the JVM was spending more
+time collecting than executing — and latency went nonlinear.
+
+![Locust UI and Grafana during memory saturation](/images/datomic-locust-grafana-saturation.png)
+
+Locust's RPS plateaued at ~500 despite 2,500 active users. With `constant_pacing(1)`
+each user should generate ~1 RPS; the gap between users and actual RPS shows
+that requests were taking longer than 1 second each — Locust couldn't keep up.
+Write latency in Grafana stayed relatively stable (~30–40 ms p50), because writes
+go through the Transactor's single-threaded commit loop — a separate bottleneck
+entirely, capped at ~500 tx/s regardless of read pressure.
+
+![Windows Task Manager showing VmmemWSL at 15.5 GB](/images/datomic-windows-task-manager-memory.png)
+
+The two bottlenecks are architecturally independent: write throughput is limited
+by the Transactor's commit loop; read latency under high concurrency is limited
+by the peer's object cache size (i.e., `-Xmx`).
