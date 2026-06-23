@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Habit Tracker: acompanhe seus hábitos num calendário e receba lembretes no horário que você definir." />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Habit Tracker</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <span class="brand">✅ <strong>Habit</strong> Tracker</span>
+      <button id="notif-btn" class="btn btn--ghost" type="button" title="Ativar notificações">
+        🔔 Lembretes
+      </button>
+    </div>
+  </header>
+
+  <main class="container" id="app">
+    <!-- Banner de status de notificações -->
+    <div id="notif-banner" class="banner" hidden></div>
+
+    <!-- Lista de hábitos / barra lateral -->
+    <section class="layout">
+      <aside class="sidebar">
+        <div class="sidebar__head">
+          <h2>Meus hábitos</h2>
+          <button id="add-habit-btn" class="btn btn--primary btn--sm" type="button">+ Novo</button>
+        </div>
+        <ul id="habit-list" class="habit-list"></ul>
+        <p id="empty-state" class="empty" hidden>
+          Nenhum hábito ainda.<br />Crie o primeiro para começar a marcar seus dias. 🌱
+        </p>
+      </aside>
+
+      <!-- Painel principal: calendário do hábito selecionado -->
+      <section class="panel" id="panel" hidden>
+        <div class="panel__head">
+          <div>
+            <h2 id="panel-title" class="panel__title"></h2>
+            <p id="panel-stats" class="panel__stats"></p>
+          </div>
+          <div class="panel__actions">
+            <button id="edit-habit-btn" class="btn btn--ghost btn--sm" type="button">✏️ Editar</button>
+            <button id="delete-habit-btn" class="btn btn--danger btn--sm" type="button">🗑️ Excluir</button>
+          </div>
+        </div>
+
+        <div class="cal">
+          <div class="cal__nav">
+            <button id="cal-prev" class="btn btn--ghost btn--icon" type="button" aria-label="Mês anterior">‹</button>
+            <span id="cal-month" class="cal__month"></span>
+            <button id="cal-next" class="btn btn--ghost btn--icon" type="button" aria-label="Próximo mês">›</button>
+          </div>
+          <div class="cal__weekdays" id="cal-weekdays"></div>
+          <div class="cal__grid" id="cal-grid"></div>
+        </div>
+
+        <p class="panel__hint">Clique em um dia para marcar/desmarcar o hábito como cumprido.</p>
+      </section>
+
+      <section class="panel panel--placeholder" id="placeholder">
+        <p>👈 Selecione um hábito ou crie um novo para ver o calendário.</p>
+      </section>
+    </section>
+  </main>
+
+  <!-- Modal de criar/editar hábito -->
+  <dialog id="habit-dialog" class="dialog">
+    <form method="dialog" id="habit-form" class="dialog__form">
+      <h3 id="dialog-title">Novo hábito</h3>
+
+      <label class="field">
+        <span>Nome</span>
+        <input id="f-name" name="name" type="text" maxlength="40" required placeholder="Ex.: Beber 2L de água" />
+      </label>
+
+      <label class="field">
+        <span>Emoji</span>
+        <input id="f-emoji" name="emoji" type="text" maxlength="2" placeholder="💧" />
+      </label>
+
+      <label class="field">
+        <span>Cor</span>
+        <input id="f-color" name="color" type="color" value="#6366f1" />
+      </label>
+
+      <label class="field">
+        <span>Horário do lembrete (opcional)</span>
+        <input id="f-time" name="time" type="time" />
+      </label>
+
+      <div class="dialog__actions">
+        <button type="button" id="dialog-cancel" class="btn btn--ghost">Cancelar</button>
+        <button type="submit" class="btn btn--primary">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="footer container">
+    <small>Dados salvos apenas neste navegador (localStorage). Funciona offline.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
